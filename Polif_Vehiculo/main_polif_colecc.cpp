@@ -1,3 +1,4 @@
+#include "Clases.h"
 #include <iostream>
 #include <string>
 using namespace std;
@@ -17,11 +18,17 @@ using namespace std;
 int main()
 {
     // --- Ejercicio 2.
-    Vehiculo arr[4] = { Auto("Bugatti", "Chiron Super Sport", 440, 100),
-                        Auto("Toyota", "Corolla Sedan", 180, 50),
-                        Motocicleta("Kawasaki", "Ninja H2R", 400, 4),
-                        Motociclera("Honda", "CB190R", 120, 1)
-                    };
+    Auto bugatti("Bugatti", "Chiron Super Sport", 440, 100);
+    Auto toyota("Toyota", "Corolla Sedan", 180, 50);
+    Motocicleta kawasaki("Kawasaki", "Ninja H2R", 400, 4);
+    Motocicleta honda("Honda", "CB190R", 120, 1);
+
+    Vehiculo* vehiculos[4] = {&bugatti, &toyota, &kawasaki, &honda};
+
+    for (int i = 0; i < 4; i++)
+    {
+        vehiculos[i]->mostrarInfo();
+    };
 
     // --- Ejercicio 5.
 }
