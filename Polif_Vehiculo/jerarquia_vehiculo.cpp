@@ -51,8 +51,13 @@ class Auto : public Vehiculo
        int tanque_capacidad; 
     public:
         Auto(string marca, string modelo, string velocidadMax, int tanque_capacidad); // Constructor de la sub-clase Auto.
-        void mostrarInfo() const override; // Método sobrescrito que permite visualizar la información del vehículo.
+        void mostrarInfo() const override; // Método sobrescrito que permite visualizar la información del auto.
 };
+
+Auto::Auto(string marca, string modelo, string VelocidadMax, int tanque_capacidad) : Vehiculo(marca, modelo, velocidadMax)
+{
+    this->tanque_capacidad = tanque_capacidad;
+}
 
 /***********************************************************************/
 
@@ -61,6 +66,11 @@ class Motocicleta : public Vehiculo
     private:
        int cilindros; 
     public:
-        Motocicleta(string marca, string modelo, string velocidadMax, int cilindros); // Constructor de la sub-clase Auto.
-        void mostrarInfo() const override; // Método sobrescrito que permite visualizar la información del vehículo.
+        Motocicleta(string marca, string modelo, string velocidadMax, int cilindros); // Constructor de la sub-clase Motocicleta.
+        void mostrarInfo() const override; // Método sobrescrito que permite visualizar la información de la motocicleta.
 };
+
+Motocicleta::Motocicleta(string marca, string modelo, string VelocidadMax, int tanque_capacidad) : Vehiculo(marca, modelo, velocidadMax)
+{
+    this->cilindros = cilindros;
+}
