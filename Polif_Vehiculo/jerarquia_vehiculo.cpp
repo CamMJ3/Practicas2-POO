@@ -2,7 +2,7 @@
 #include <string>
 using namespace std;
 
-// Á, É, Í, Ó, Ú y á, é, í, ó,
+// Á, É, Í, Ó, Ú y á, é, í, ó, ú
 
 /** 
  * @file 
@@ -59,6 +59,15 @@ Auto::Auto(string marca, string modelo, string VelocidadMax, int tanque_capacida
     this->tanque_capacidad = tanque_capacidad;
 }
 
+void Auto::mostrarInfo() const
+{
+    cout << "\n-------> INFORMACIÓN DEL AUTO \n";
+    cout << "Marca : " << marca << endl;
+    cout << "Modelo : " << marca << endl;
+    cout << "Velocidad máxima : " << marca << endl;
+    cout << "Capacidad del tanque : " << tanque_capacidad << endl;
+}
+
 /***********************************************************************/
 
 class Motocicleta : public Vehiculo
@@ -73,4 +82,13 @@ class Motocicleta : public Vehiculo
 Motocicleta::Motocicleta(string marca, string modelo, string VelocidadMax, int tanque_capacidad) : Vehiculo(marca, modelo, velocidadMax)
 {
     this->cilindros = cilindros;
+}
+
+void Motocicleta::mostrarInfo() const
+{
+    cout << "\n-------> INFORMACIÓN DE LA MOTOCICLETA \n";
+    cout << "Marca : " << marca << endl;
+    cout << "Modelo : " << marca << endl;
+    cout << "Velocidad máxima : " << marca << endl;
+    cout << "Número de cilindros : " << cilindros << endl;
 }
