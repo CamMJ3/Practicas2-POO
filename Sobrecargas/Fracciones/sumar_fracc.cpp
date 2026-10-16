@@ -22,7 +22,7 @@ class Fraccion
         Fraccion operator+(const Fraccion& o) const;
         bool operator==(const Fraccion& o) const;
 
-        void ver_fraccion() const;
+        friend ostream& operator<<(ostream& ost, const Fraccion& fr);
 };
 
 // ----- Código de las funciones.
@@ -48,9 +48,10 @@ bool Fraccion::operator==(const Fraccion& o) const
     return numerador * o.denominador == o.numerador * denominador;
 }
 
-void Fraccion::ver_fraccion() const
+ostream& operator<<(ostream& ost, const Fraccion& fr)
 {
-    cout << numerador << " / " << denominador << endl;
+    ost << fr.numerador << " / " << fr.denominador;
+    return ost;
 }
 
 
@@ -67,5 +68,5 @@ int main()
     Fraccion fr4(1, 3);
 
     Fraccion suma = fr1 + fr2;
-    cout << "La suma de " << fr1.ver_fraccion() << " + " << fr2.ver_fraccion() << " es : " << suma;
+    cout << "La suma de " << fr1.ver_fraccion() << " + " << fr2.ver_fraccion() << " es : " << suma.ver_fraccion();
 }
