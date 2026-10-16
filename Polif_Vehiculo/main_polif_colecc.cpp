@@ -1,6 +1,7 @@
-#include "Clases.h"
+#include "Clases/Clases.h"
 #include <iostream>
 #include <string>
+
 using namespace std;
 
 // Á, É, Í, Ó, Ú y á, é, í, ó, ú
