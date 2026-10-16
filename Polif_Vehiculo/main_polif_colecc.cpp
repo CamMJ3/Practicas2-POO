@@ -37,7 +37,7 @@ int main()
     };
 
     // ------- Ejercicio 5.
-    Vehiculo tesla("Tesla", "Model S Plaid", 322);
+    Auto tesla("Tesla", "Model S Plaid", 322, 0);
     Auto porsche("Porsche", "GT3 RS", 296, 64);
     Motocicleta bmw("BMW", "S 1000 RR", 303, 4);
 
@@ -49,6 +49,6 @@ int main()
 
     for (vector<Vehiculo*>::iterator itera = vehiculos2.begin(); itera != vehiculos2.end(); ++itera)
     {
-        (*itera)->mostrarInfo();
+        (*itera)->mostrarInfo(); 
     }
 }
