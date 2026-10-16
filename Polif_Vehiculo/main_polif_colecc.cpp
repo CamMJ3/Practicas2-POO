@@ -12,9 +12,9 @@ using namespace std;
 
 /** 
  * @file 
- * @brief Se define la clase padre "Vehículo", y sus clases derivadas "Auto" y "Motocicleta", defininiendo
- * las declaraciones de funciones para esta utilizando, primero, funciones virtuales en la clase padre y
- * funciones sobrescritas en las clases derivadas.
+ * @brief Se incluye en la función main() las indicaciones de los ejercicios
+ * 2 y 5, usando un arreglo y un vector respectivamente para visualizar la
+ * información de los vehículos invocando a mostrarInfo().
 
 /***********************************************************************/
 
