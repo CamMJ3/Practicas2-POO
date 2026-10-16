@@ -55,3 +55,17 @@ void Fraccion::ver_fraccion() const
 
 
 /***********************************************************************/
+
+int main()
+{
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
+
+    Fraccion fr1(1, 8);
+    Fraccion fr2(7, 19);
+    Fraccion fr3(3, 9);
+    Fraccion fr4(1, 3);
+
+    Fraccion suma = fr1 + fr2;
+    cout << "La suma de " << fr1.ver_fraccion() << " + " << fr2.ver_fraccion() << " es : " << suma;
+}
