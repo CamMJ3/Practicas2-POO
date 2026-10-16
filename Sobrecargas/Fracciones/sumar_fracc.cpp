@@ -68,5 +68,7 @@ int main()
     Fraccion fr4(1, 3);
 
     Fraccion suma = fr1 + fr2;
-    cout << "La suma de " << fr1.ver_fraccion() << " + " << fr2.ver_fraccion() << " es : " << suma.ver_fraccion();
+    cout << "La suma de " << fr1 << " + " << fr2 << " es : " << suma << endl;
+
+    cout << "\nLas fracciones " << fr3 << " y " << fr4 << (fr3 == fr4 ? " SI " : " NO ") << "equivalentes\n";
 }
