@@ -1,5 +1,6 @@
 #include <iostream>
-#include <windows.h>
+
+using namespace std;
 
 /** 
  * @file 
@@ -32,4 +33,16 @@ int Calculadora::sumar(int num1, int num2, int num3)
 double Calculadora::sumar(double num1, double num2)
 {
     return num1 + num2;
+}
+
+
+/***********************************************************************/
+
+int main()
+{
+    Calculadora calc;
+
+    cout << "\nLa suma de dos enteros (4 y 17) es : " << calc.sumar(4, 17) << endl;
+    cout << "La suma de tres enteros (20, 4 y 9) es : " << calc.sumar(20, 4, 9) << endl;
+    cout << "La suma de dos decimales (2.8 y 10.3) es : " << calc.sumar(2.8, 10.3) << endl;
 }
