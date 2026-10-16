@@ -5,9 +5,9 @@ using namespace std;
 
 /** 
  * @file 
- * @brief Se define la clase padre "Vehículo", y sus clases derivadas "Auto" y "Motocicleta", defininiendo
- * las declaraciones de funciones para estas utilizando, primero, funciones virtuales en la clase padre y
- * funciones sobrescritas en las clases derivadas.
+ * @brief Se define la clase Fraccion al igual que sus declaraciones de funciones y el
+ * código pertinente. En este caso, se define su construct
+ * 
 
 /***********************************************************************/
 
@@ -17,12 +17,12 @@ class Fraccion
         int numerador;
         int denominador;
     public:
-        Fraccion(int numerador, int denominador);
+        Fraccion(int numerador, int denominador); // Constructor de la clase Fraccion.
 
-        Fraccion operator+(const Fraccion& o) const;
-        bool operator==(const Fraccion& o) const;
+        Fraccion operator+(const Fraccion& o) const; // Sobrecarga del operador +.
+        bool operator==(const Fraccion& o) const; // Sobrecarga del operador ==.
 
-        friend ostream& operator<<(ostream& ost, const Fraccion& fr);
+        friend ostream& operator<<(ostream& ost, const Fraccion& fr); // Sobrecarga del operador << de tipo friend (para acceder a sus atributos privados).
 };
 
 // ----- Código de las funciones.
@@ -70,5 +70,5 @@ int main()
     Fraccion suma = fr1 + fr2;
     cout << "La suma de " << fr1 << " + " << fr2 << " es : " << suma << endl;
 
-    cout << "\nLas fracciones " << fr3 << " y " << fr4 << (fr3 == fr4 ? " SI " : " NO ") << "equivalentes\n";
+    cout << "\nLas fracciones " << fr3 << " y " << fr4 << (fr3 == fr4 ? " SI " : " NO ") << "son equivalentes\n";
 }
